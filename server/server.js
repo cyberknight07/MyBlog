@@ -107,7 +107,7 @@ server.post("/signin", (req, res) => {
         return res.status(403).json({ error: "Email not found" });
       }
 
-      if (user.google_auth) {
+      if (!user.google_auth) {
         bcrypt.compare(password, user.personal_info.password, (err, result) => {
           if (err) {
             return res
