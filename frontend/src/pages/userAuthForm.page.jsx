@@ -74,4 +74,4 @@ const UserAuthForm=({ type })=> {
     )
 }
 
-export default UserAuthForm;
+export default  UserAuthForm;
